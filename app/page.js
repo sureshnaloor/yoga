@@ -1,101 +1,61 @@
-import Image from "next/image";
-
-export default function Home() {
+import ThemeSwitcher from './components/ThemeSwitcher';
+import Link from 'next/link';
+export default function LandingPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+      {/* Sidebar */}
+      <aside className="w-1/6 bg-gray-300 dark:bg-blue-400 text-text-light dark:text-text-dark p-4">
+        <h2 className="text-xl font-bold">Yogini- Exbeyond</h2>
+        {/* Add more sidebar content here */}
+      </aside>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col">
+        {/* Header */}
+        <header className="bg-primary dark:bg-gray-300 text-white dark:text-zinc-800 p-4 flex justify-between items-center">
+          <h1 className="text-xl font-semibold italic">Welcome to Our Yoga Platform</h1> <h3 >  click <Link href="/jitsi">here</Link> to Yogaroom </h3>
+          <ThemeSwitcher />
+        </header>
+
+        {/* Hero Section */}
+        <section className="flex-1 bg-gray-400 dark:bg-gray-100 text-white dark:text-zinc-800  p-8">
+          <h2 className="text-3xl font-bold">Yoga Experience -Stream and Connect Effortlessly</h2>
+          <p className="mt-4">Yoga enthusiasts- Join us to experience seamless yoga sessions.</p>
+        </section>
+
+        {/* Features Section */}
+        <section className="p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+          <h2 className="text-2xl font-bold">Features</h2>
+          <ul className="mt-4 space-y-2">
+            <li>High-quality video streaming</li>
+            <li>Secure and private yoga sessions</li>
+            <li>Easy to use interface</li>
+            {/* Add more features */}
+          </ul>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="bg-gray-100 dark:bg-gray-800 p-8 text-text-light dark:text-text-dark">
+          <h2 className="text-2xl font-bold">Testimonials</h2>
+          <p className="mt-4">"This platform has transformed our yoga experience!" - User A</p>
+          {/* Add more testimonials */}
+        </section>
+
+        {/* FAQ Section */}
+        <section className="p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+          <h2 className="text-2xl font-bold">How To / FAQ</h2>
+          <ul className="mt-4 space-y-2">
+            <li>How to start a video call?</li>
+            <li>What are the system requirements?</li>
+            {/* Add more FAQs */}
+          </ul>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-primary-dark text-white p-4">
+          <p>&copy; 2024 ExBeyond venture. All rights reserved.</p>
+        </footer>
+      </div>
     </div>
   );
 }
