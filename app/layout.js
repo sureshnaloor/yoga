@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import { ThemeProvider } from 'next-themes';
 import localFont from "next/font/local";
 import "./globals.css";
