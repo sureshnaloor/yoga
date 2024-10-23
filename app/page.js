@@ -1,11 +1,14 @@
-import ThemeSwitcher from './components/ThemeSwitcher';
-import Link from 'next/link';
+ // Replace with the actual icon you choose
+
+ import ThemeSwitcher from './components/ThemeSwitcher';
+import Link from 'next/link'
+import YogaIconComp from './components/Yogaiconcomp';
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+    <div className="md:flex min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
       {/* Sidebar */}
-      <aside className="w-1/6 bg-gray-300 dark:bg-blue-400 text-text-light dark:text-text-dark p-4">
-        <h2 className="text-xl font-bold">Yogini- Exbeyond</h2>
+      <aside className="w-1/12 md:w-1/6 bg-gray-300 dark:bg-blue-400 text-text-light dark:text-text-dark p-4">
+        <h2 className="text-xs md:text-xl font-bold">Yogini- Exbeyond</h2>
         {/* Add more sidebar content here */}
       </aside>
 
@@ -13,14 +16,22 @@ export default function LandingPage() {
       <div className="flex-1 flex flex-col">
         {/* Header */}
         <header className="bg-primary dark:bg-gray-300 text-white dark:text-zinc-800 p-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold italic">Welcome to Our Yoga Platform</h1> <h3 >  click <Link href="/jitsi">here</Link> to Yogaroom </h3>
+          <h1 className="text-xl font-semibold italic">Welcome to Our Yoga Platform</h1>
+          <Link href="/jitsi">
+            <div className="relative group">
+              <YogaIconComp />
+              <span className="absolute left-0 top-full mt-1 w-max opacity-0 group-hover:opacity-100 transition-opacity text-sm bg-gray-700 text-white p-1 rounded">
+                Click here to yoga
+              </span>
+            </div>
+          </Link>
           <ThemeSwitcher />
         </header>
 
         {/* Hero Section */}
-        <section className="flex-1 bg-gray-400 dark:bg-gray-100 text-white dark:text-zinc-800  p-8">
-          <h2 className="text-3xl font-bold">Yoga Experience -Stream and Connect Effortlessly</h2>
-          <p className="mt-4">Yoga enthusiasts- Join us to experience seamless yoga sessions.</p>
+        <section className="flex-1 bg-gray-400 dark:bg-gray-100 text-white dark:text-zinc-800 p-8">
+          <h2 className="text-3xl font-bold">Yoga Experience - Stream and Connect Effortlessly</h2>
+          <p className="mt-4">Yoga enthusiasts - Join us to experience seamless yoga sessions.</p>
         </section>
 
         {/* Features Section */}
