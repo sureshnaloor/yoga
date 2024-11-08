@@ -1,8 +1,8 @@
- // Replace with the actual icon you choose
+// Replace with the actual icon you choose
 
- import ThemeSwitcher from './components/ThemeSwitcher';
-import Link from 'next/link'
-import YogaIconComp from './components/Yogaiconcomp';
+import ThemeSwitcher from "./components/ThemeSwitcher";
+import Link from "next/link";
+import YogaIconComp from "./components/Yogaiconcomp";
 export default function LandingPage() {
   return (
     <div className="md:flex min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
@@ -16,22 +16,48 @@ export default function LandingPage() {
       <div className="flex-1 flex flex-col">
         {/* Header */}
         <header className="bg-primary dark:bg-gray-300 text-white dark:text-zinc-800 p-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold italic">Welcome to Our Yoga Platform</h1>
-          <Link href="/jitsi">
+          <h1 className="text-xl font-semibold italic">
+            Welcome to Our Yoga Platform
+          </h1>
+          <Link href="/yogaroom">
             <div className="relative group">
               <YogaIconComp />
               <span className="absolute left-0 top-full mt-1 w-max opacity-0 group-hover:opacity-100 transition-opacity text-sm bg-gray-700 text-white p-1 rounded">
-                Click here to yoga
+                Click here to yogaroom
               </span>
             </div>
           </Link>
           <ThemeSwitcher />
+          <div className="flex items-center">
+            {/* <object
+              data="/documents/yoga.pdf"
+              type="application/pdf"
+              className="w-full h-1/2"
+            >
+              <p>
+                Your browser does not support PDFs. Please download the PDF to
+                view it: <a href="/documents/yoga.pdf">Download PDF</a>
+              </p>
+            </object> */}
+
+            <Link
+              href="/documents/yoga.pdf"
+              target="_blank"
+              className="text-zinc-100 hover:underline dark:text-zinc-900"
+            >
+              Yoga Instructions
+            </Link>
+          </div>
         </header>
 
         {/* Hero Section */}
         <section className="flex-1 bg-gray-400 dark:bg-gray-100 text-white dark:text-zinc-800 p-8">
-          <h2 className="text-3xl font-bold">Yoga Experience - Stream and Connect Effortlessly</h2>
-          <p className="mt-4">Yoga enthusiasts - Join us to experience seamless yoga sessions.</p>
+          <h2 className="text-3xl font-bold">
+            Yoga Experience - Stream and Connect Effortlessly
+          </h2>
+          <p className="mt-4">
+            Yoga enthusiasts - Join us to experience seamless yoga sessions.
+          </p>
         </section>
 
         {/* Features Section */}
@@ -48,7 +74,9 @@ export default function LandingPage() {
         {/* Testimonials Section */}
         <section className="bg-gray-100 dark:bg-gray-800 p-8 text-text-light dark:text-text-dark">
           <h2 className="text-2xl font-bold">Testimonials</h2>
-          <p className="mt-4">"This platform has transformed our yoga experience!" - User A</p>
+          <p className="mt-4">
+            "This platform has transformed our yoga experience!" - User A
+          </p>
           {/* Add more testimonials */}
         </section>
 
