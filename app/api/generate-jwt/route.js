@@ -6,7 +6,7 @@ export async function POST(req) {
 
     // Your logic to generate a JWT token
     const token = generateJaasJwt(roomName, user);
-    console.log(token); // Replace with actual token generation logic
+    // console.log(token); // Replace with actual token generation logic
 
     return new Response(JSON.stringify({ token }), {
       status: 200,
