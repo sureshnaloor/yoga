@@ -3,6 +3,10 @@
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import Link from "next/link";
 import YogaIconComp from "./components/Yogaiconcomp";
+import InstructionsIcon from "./components/instructionsicon";
+import VideosIcon from "./components/Videosicon";
+
+
 export default function LandingPage() {
   return (
     <div className="md:flex min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
@@ -27,27 +31,29 @@ export default function LandingPage() {
               </span>
             </div>
           </Link>
-          <ThemeSwitcher />
-          <div className="flex items-center">
-            {/* <object
-              data="/documents/yoga.pdf"
-              type="application/pdf"
-              className="w-full h-1/2"
-            >
-              <p>
-                Your browser does not support PDFs. Please download the PDF to
-                view it: <a href="/documents/yoga.pdf">Download PDF</a>
-              </p>
-            </object> */}
 
+          <div className="flex items-center">
+           
             <Link
               href="/documents/yoga.pdf"
               target="_blank"
-              className="text-zinc-100 hover:underline dark:text-zinc-900"
+              className="text-zinc-100 hover:text-zinc-500 dark:text-zinc-900 dark:hover:text-zinc-100"
             >
+              <InstructionsIcon />
               Yoga Instructions
             </Link>
           </div>
+          <div>
+            <Link
+              href="/youtube"
+              target="_blank"
+              className="text-zinc-100 hover:text-zinc-500 dark:text-zinc-900 dark:hover:text-zinc-100"
+            >
+              <VideosIcon />
+              Yoga Videos
+            </Link>
+          </div>
+          <ThemeSwitcher />
         </header>
 
         {/* Hero Section */}
