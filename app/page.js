@@ -81,7 +81,7 @@ export default function LandingPage() {
         <section className="bg-gray-100 dark:bg-gray-800 p-8 text-text-light dark:text-text-dark">
           <h2 className="text-2xl font-bold">Testimonials</h2>
           <p className="mt-4">
-            "This platform has transformed our yoga experience!" - User A
+            "This platform has transformed our yoga experience!" - User
           </p>
           {/* Add more testimonials */}
         </section>
