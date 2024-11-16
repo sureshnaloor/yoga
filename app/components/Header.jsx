@@ -12,7 +12,12 @@ export default function Header() {
         Welcome to Our Yoga Platform
       </h1>
       <nav className="flex w-full md:w-auto justify-around md:justify-end items-center md:gap-4">
-        <Link href="/yogaroom" className="relative group">
+        <Link 
+          href="/yogaroom" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group"
+        >
           <div className="flex items-center">
             <div className="w-4 md:w-6 lg:w-8">
               <YogaIconComp />
@@ -23,7 +28,12 @@ export default function Header() {
             </span>
           </div>
         </Link>
-        <Link href="/documents/yoga.pdf" className="relative group">
+        <Link 
+          href="/documents/yoga.pdf" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group text-zinc-100 hover:text-zinc-500 dark:text-zinc-900 dark:hover:text-zinc-100"
+        >
           <div className="flex items-center">
             <div className="w-4 md:w-6 lg:w-8">
               <InstructionsIcon />
@@ -34,7 +44,12 @@ export default function Header() {
             </span>
           </div>
         </Link>
-        <Link href="/youtube" className="relative group">
+        <Link 
+          href="/youtube" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group text-zinc-100 hover:text-zinc-500 dark:text-zinc-900 dark:hover:text-zinc-100"
+        >
           <div className="flex items-center">
             <div className="w-4 md:w-6 lg:w-8">
               <VideosIcon />
