@@ -3,6 +3,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import YogaIconComp from "./Yogaiconcomp";
 import InstructionsIcon from "./instructionsicon";
 import VideosIcon from "./Videosicon";
+import AudioPlayer from "./AudioPlayer";
 
 export default function Header() {
   return (
@@ -22,11 +23,7 @@ export default function Header() {
             </span>
           </div>
         </Link>
-        <Link 
-          href="/documents/yoga.pdf" 
-          target="_blank"
-          className="relative group text-zinc-100 hover:text-zinc-500 dark:text-zinc-900 dark:hover:text-zinc-100"
-        >
+        <Link href="/documents/yoga.pdf" className="relative group">
           <div className="flex items-center">
             <div className="w-4 md:w-6 lg:w-8">
               <InstructionsIcon />
@@ -37,11 +34,7 @@ export default function Header() {
             </span>
           </div>
         </Link>
-        <Link 
-          href="/youtube" 
-          target="_blank"
-          className="relative group text-zinc-100 hover:text-zinc-500 dark:text-zinc-900 dark:hover:text-zinc-100"
-        >
+        <Link href="/youtube" className="relative group">
           <div className="flex items-center">
             <div className="w-4 md:w-6 lg:w-8">
               <VideosIcon />
@@ -52,6 +45,7 @@ export default function Header() {
             </span>
           </div>
         </Link>
+        <AudioPlayer />
         <div className="w-4 md:w-6 lg:w-8">
           <ThemeSwitcher />
         </div>
